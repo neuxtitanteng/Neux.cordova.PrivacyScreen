@@ -1,0 +1,17 @@
+{
+  "name": "PrivacyScreen",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "Neux.cordova.PrivacyScreen",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "ISC"
+}
