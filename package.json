@@ -1,5 +1,5 @@
 {
-  "name": "Neux.cordova.PrivacyScreen",
+  "name": "neux.cordova.privacyscreen",
   "version": "1.0.0",
   "description": "Cordova plugin for PrivacyScreen for iOS.",
   "cordova": {
