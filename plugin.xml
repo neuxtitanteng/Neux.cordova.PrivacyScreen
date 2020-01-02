@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="Neux.cordova.PrivacyScreen" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-	<name>Neux.cordova.PrivacyScreen</name>
+	<name>ios PrivacyScreen</name>
+	<description>Cordova plugin for PrivacyScreen for iOS.</description>
+	<license>MIT</license>
+	<keywords>cordova</keywords>
+	<repo>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen.git</repo>
+	<issue>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen/issues</issue>
 <platform name="ios">
 	<config-file parent="/*" target="config.xml">
 		<feature name="PrivacyScreen">
