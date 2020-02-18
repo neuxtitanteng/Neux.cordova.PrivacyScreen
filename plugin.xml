@@ -1,19 +1,29 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="Neux.cordova.PrivacyScreen" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-	<name>ios PrivacyScreen</name>
-	<description>Cordova plugin for PrivacyScreen for iOS.</description>
-	<license>MIT</license>
-	<keywords>cordova</keywords>
-	<repo>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen.git</repo>
-	<issue>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen/issues</issue>
-<platform name="ios">
-	<config-file parent="/*" target="config.xml">
-		<feature name="PrivacyScreen">
-			<param name="ios-package" value="PrivacyScreen" />
-			<param name="onload" value="true" />
-		</feature>
-	</config-file>
-	<header-file src="src/ios/PrivacyScreen.h" />
-	<source-file src="src/ios/PrivacyScreen.m" />
-</platform>
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="Neux.cordova.PrivacyScreen" version="1.0.0">
+  <name>Neux PrivacyScreen</name>
+  <description>Cordova plugin for PrivacyScreen for iOS android.</description>
+  <license>MIT</license>
+  <keywords>cordova</keywords>
+  <repo>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen.git</repo>
+  <issue>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen/issues</issue>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="PrivacyScreen">
+        <param name="ios-package" value="PrivacyScreen"/>
+        <param name="onload" value="true"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/PrivacyScreen.h"/>
+    <source-file src="src/ios/PrivacyScreen.m"/>
+  </platform>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="PrivacyScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/SplashScreen.java" target-dir="src/Neux/cordova/SplashScreen/SplashScreen"/>
+  </platform>
 </plugin>
