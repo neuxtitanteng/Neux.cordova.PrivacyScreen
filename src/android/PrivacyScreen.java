@@ -20,7 +20,7 @@ import android.os.Bundle;
  * This class sets the FLAG_SECURE flag on the window to make the app
  *  private when shown in the task switcher
  */
-public class PrivacyScreenPlugin extends CordovaPlugin {
+public class PrivacyScreen extends CordovaPlugin {
 
   @Override
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
