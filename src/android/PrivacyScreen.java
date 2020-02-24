@@ -1,4 +1,4 @@
-package Neux.cordova.privacyscreen;
+package com.neux.privacyscreen;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
