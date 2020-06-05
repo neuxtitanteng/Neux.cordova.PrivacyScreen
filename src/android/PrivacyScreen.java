@@ -45,31 +45,15 @@ public class PrivacyScreen extends CordovaPlugin {
       cordova.getActivity().runOnUiThread(new Runnable() {
           public void run() {
               cordova.getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
-              System.out.println("Screen will not be kept on. Cancel KeepScreenOn");
           }
       });
-      // this.cordova.getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
-      // Activity activity = this.cordova.getActivity();
-      // Window window = activity.getWindow();
-      // WindowManager wm = activity.getWindowManager();
-      // window.addFlags(WindowManager.LayoutParams.FLAG_SECURE);
-      // wm.removeViewImmediate(window.getDecorView());
-      // wm.addView(window.getDecorView(), window.getAttributes());
     }
     
     private void removePrivacyScreen() {
       cordova.getActivity().runOnUiThread(new Runnable() {
           public void run() {
               cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
-              System.out.println("Screen will not be kept on. Cancel KeepScreenOn");
           }
       });
-      // this.cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
-      // Activity activity = this.cordova.getActivity();
-      // Window window = activity.getWindow();
-      // WindowManager wm = activity.getWindowManager();
-      // // window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
-      // wm.removeViewImmediate(window.getDecorView());
-      // wm.addView(window.getDecorView(), window.getAttributes());
     }
 }
