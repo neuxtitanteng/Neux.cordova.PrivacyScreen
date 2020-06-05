@@ -28,4 +28,48 @@ public class PrivacyScreen extends CordovaPlugin {
     Activity activity = this.cordova.getActivity();
     activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
   }
+
+  @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+      if (action.equals("addPrivacyScreen")) {
+        this.addPrivacyScreen();
+        return true;
+      } else if (action.equals("removePrivacyScreen")) {
+        this.removePrivacyScreen();
+        return true;
+      }
+      return false;
+    }
+
+    private  void addPrivacyScreen() {
+      cordova.getActivity().runOnUiThread(new Runnable() {
+          public void run() {
+              cordova.getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
+              System.out.println("Screen will not be kept on. Cancel KeepScreenOn");
+          }
+      });
+      // this.cordova.getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
+      // Activity activity = this.cordova.getActivity();
+      // Window window = activity.getWindow();
+      // WindowManager wm = activity.getWindowManager();
+      // window.addFlags(WindowManager.LayoutParams.FLAG_SECURE);
+      // wm.removeViewImmediate(window.getDecorView());
+      // wm.addView(window.getDecorView(), window.getAttributes());
+    }
+    
+    private void removePrivacyScreen() {
+      cordova.getActivity().runOnUiThread(new Runnable() {
+          public void run() {
+              cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+              System.out.println("Screen will not be kept on. Cancel KeepScreenOn");
+          }
+      });
+      // this.cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+      // Activity activity = this.cordova.getActivity();
+      // Window window = activity.getWindow();
+      // WindowManager wm = activity.getWindowManager();
+      // // window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
+      // wm.removeViewImmediate(window.getDecorView());
+      // wm.addView(window.getDecorView(), window.getAttributes());
+    }
 }

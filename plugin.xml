@@ -7,6 +7,9 @@
   <keywords>cordova</keywords>
   <repo>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen.git</repo>
   <issue>https://github.com/neuxtitanteng/Neux.cordova.PrivacyScreen/issues</issue>
+  <js-module name="PrivacyScreen" src="www/PrivacyScreen.js">
+		<clobbers target="cordova.plugins.PrivacyScreen" />
+	</js-module>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
       <feature name="PrivacyScreen">
